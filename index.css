@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("img/aditya-vyas-PzhmEp_aDU4-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow: hidden;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+}
+.piano-container {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    width: 100vw;
+    height: 400px;
+    grid-gap: 2px;
+    justify-content: center;
+    align-items: center;    
+    box-shadow: 0 0 2rem white;
+    position: absolute;
+    bottom: 0px;
+}
+
+.keys {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 17px;
+    transition: all 0.09s ease-in-out;
+}
+
+.black {
+    background-color: transparent;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    color: white;
+    border-top: 2px solid black;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: white;
+    box-shadow: 0 0 1rem white;
+}
